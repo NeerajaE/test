@@ -1,0 +1,38 @@
+<h1>this is web page</h1>
+
+
+<br><br>
+<div *ngIf="checkstatus">
+FirstName : <input type="text" id="firstname" value="fname"><br><br>
+secondname :<input type="text" id="secondname"> <br><br>
+
+latname:<input type="text" id="thirdname" [(ngModel)]="surname">
+
+Submit:<input type="button" value="Print"  (click)="print($event)"> <br>
+
+</div><br>
+<h1 >Form with validations with alert boxes on submbiting</h1>
+<form #userlogin ="ngForm" (ngSubmit)="onsubmit(userlogin.value)">
+    <input type="text" name="email" placeholder="email_id" ngModel>
+    <br/>
+    <input type="password" name="password" placeholder="password" ngModel>
+    <br />
+    <input type="submit" value="Submit">
+</form>
+<br>
+<h1>highlighting the box to be filled on submitting</h1>
+<form appForm [formGroup]="form" (ngSubmit)="submit()">
+    <input formControlName="first" id="first" />
+    <br/>
+    <input formControlName="last" id="last" />
+    <br/>
+    <button>submit</button>
+</form>
+    
+
+
+<br>
+<br>
+
+
+
