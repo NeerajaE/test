@@ -16,7 +16,7 @@ export class TesService {
   constructor(private httpclient : HttpClient) { }
 
   print(){
-   // alert('hellow ,hiii');
+   // alert('hellow );
   }
 
   getAllUsers():Observable<User[]>{
